@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        artisan: ['Artisan', 'sans-serif'], 
+        artisan: ['Artisan12', 'sans-serif'], 
       },
     },
   },

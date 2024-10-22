@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'Artisan';
-    src: url('/public/fonts/Artisan.otf') format('opentype');
+    font-family: 'Artisan12';
+    src: url('/public/fonts/artisan12.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
   }

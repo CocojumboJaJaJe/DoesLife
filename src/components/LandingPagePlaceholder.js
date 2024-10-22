@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { FaInstagram } from 'react-icons/fa'; // Import the Instagram icon
 import { ReactComponent as Logo } from '../fixed.svg';
 
 export default function LandingPagePlaceholder() {
@@ -12,7 +11,7 @@ export default function LandingPagePlaceholder() {
 
       const rect = textRef.current.getBoundingClientRect();
       const textCenterX = rect.left + rect.width / 2;
-      const textCenterY = rect.top + rect.height / 2;
+      const textCenterY = rect.top - 10;
 
       const offsetX = e.clientX - textCenterX;
       const offsetY = e.clientY - textCenterY;
@@ -26,11 +25,8 @@ export default function LandingPagePlaceholder() {
       const normalizedDistance = Math.min(distance / maxDistance, 1);
 
       // Calculate shadow offset and blur
-      let shadowOffsetX = (offsetX / rect.width) * 10; // Adjust multiplier as needed
-      if(shadowOffsetX<0){
-        shadowOffsetX = 0
-      }
-      const shadowOffsetY = (offsetY / rect.height) * 1;
+      let shadowOffsetX = -(offsetX) / 100; // Adjust multiplier as needed
+      const shadowOffsetY = -(offsetY) / 100;
       const blurRadius = normalizedDistance * 30; // Max blur 20px, adjust as needed
 
       const newShadowStyle = {
@@ -50,13 +46,13 @@ export default function LandingPagePlaceholder() {
     <div className="relative w-full h-screen bg-black overflow-hidden">
       {/* Vector Logo */}
       <div className="absolute top-2 left-2 md:top-4 md:left-4 ">
-        <Logo className="h-[150px] w-[340px]" />
+        <Logo className="h-[80px] w-[180px] md:h-[100px] md:w-[240px]" />
       </div>
 
       <div className="absolute text-center top-[45%] left-0 w-full">
         {/* "Coming Soon" Text */}
         <h1
-          className="text-white text-6xl md:text-8xl font-artisan"
+          className="text-white text-2xl md:text-6xl font-artisan"
           ref={textRef}
           style={shadowStyle}
         >
@@ -64,7 +60,7 @@ export default function LandingPagePlaceholder() {
         </h1>
         {/* Animated Light Line with Shadow */}
         <div
-          className="absolute left-0 right-0 mx-auto h-[4px] mt-8 md:mt-14 shadow-2xl line-animation 
+          className="absolute left-0 right-0 mx-auto h-[4px] mt-6 md:mt-8 shadow-2xl line-animation 
             after:content-[''] after:absolute after:right-0 after:w-[20%] after:h-[60px] after:top-[-30px] after:bg-gradient-to-r after:from-transparent
              after:via-black after:to-black
              before:content-[''] before:absolute before:left-0 before:w-[20%] before:h-[60px] before:top-[-30px] before:bg-gradient-to-l before:from-transparent
@@ -74,17 +70,14 @@ export default function LandingPagePlaceholder() {
 
       <div className="flex flex-col items-center justify-between bg-black w-full h-full px-8">
         {/* "be social" Text */}
-        <div className="mt-[188px] md:mt-[100px] flex w-full">
+        <div className="mt-24 md:mt-16 flex w-full">
           <div className="grow"></div>
-          <div className="flex flex-col text-3xl items-center">
-            <h2 className="text-white font-artisan">be social</h2>
-            <a
-              href="mailto:youremail@example.com"
-              className="text-white text-sm hover:underline"
-            >
-              reach@doeslife.com
-            </a>
-          </div>
+          <a
+            href="mailto:youremail@example.com"
+            className="text-white font-artisan text-xl hover:underline"
+          >
+            connect with us
+          </a>
         </div>
 
         {/* Bottom Text Block */}
@@ -94,9 +87,9 @@ export default function LandingPagePlaceholder() {
               href="https://instagram.com/@doeslifeordoesnt"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center space-x-2 text-white"
+              className="flex items-center space-x-2 text-white font-artisan text-xl hover:underline"
             >
-              <FaInstagram className="h-8 w-8" />
+              be social
             </a>
           </div>
           <div className="grow"></div>
