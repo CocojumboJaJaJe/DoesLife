@@ -52,7 +52,7 @@ export default function LandingPagePlaceholder() {
       <div className="absolute text-center top-[45%] left-0 w-full">
         {/* "Coming Soon" Text */}
         <h1
-          className="text-white text-2xl md:text-6xl font-artisan"
+          className="text-white text-lg font-artisan"
           ref={textRef}
           style={shadowStyle}
         >
@@ -70,11 +70,11 @@ export default function LandingPagePlaceholder() {
 
       <div className="flex flex-col items-center justify-between bg-black w-full h-full px-8">
         {/* "be social" Text */}
-        <div className="mt-24 md:mt-16 flex w-full">
+        <div className="mt-24 md:mt-16 flex w-full md:pr-16">
           <div className="grow"></div>
           <a
             href="mailto:youremail@example.com"
-            className="text-white font-artisan text-xl hover:underline"
+            className="text-white font-artisan text-lg hover:underline"
           >
             connect with us
           </a>
@@ -82,12 +82,12 @@ export default function LandingPagePlaceholder() {
 
         {/* Bottom Text Block */}
         <div className="flex w-full">
-          <div className="mb-16">
+          <div className="mb-16 md:pl-16">
             <a
               href="https://instagram.com/@doeslifeordoesnt"
               target="_blank"
               rel="noreferrer"
-              className="flex items-center space-x-2 text-white font-artisan text-xl hover:underline"
+              className="flex items-center space-x-2 text-white font-artisan text-lg hover:underline"
             >
               be social
             </a>
