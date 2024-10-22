@@ -53,7 +53,7 @@ export default function LandingPagePlaceholder() {
         <Logo className="h-[150px] w-[340px]" />
       </div>
 
-      <div className="absolute text-center top-[50%] left-0 w-full">
+      <div className="absolute text-center top-[45%] left-0 w-full">
         {/* "Coming Soon" Text */}
         <h1
           className="text-white text-6xl md:text-8xl font-artisan"
