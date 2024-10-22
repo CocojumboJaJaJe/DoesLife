@@ -51,27 +51,27 @@ export default function LandingPagePlaceholder() {
 
       <div className="absolute text-center top-[45%] left-0 w-full">
         {/* "Coming Soon" Text */}
-        <h1
+        {/* <h1
           className="text-white text-lg font-artisan"
           ref={textRef}
           style={shadowStyle}
         >
           Coming soon
-        </h1>
+        </h1> */}
         {/* Animated Light Line with Shadow */}
         <div
-          className="absolute left-0 right-0 mx-auto h-[4px] mt-6 md:mt-8 shadow-2xl line-animation 
-            after:content-[''] after:absolute after:right-0 after:w-[20%] after:h-[60px] after:top-[-30px] after:bg-gradient-to-r after:from-transparent
+          className="absolute left-0 right-0 mx-auto h-[4px] mt-6 md:mt-8 shadow-2xl line-animation rotate-[-45deg] md:rotate-[-30deg]
+            after:content-[''] after:absolute after:right-[-20px] after:w-[20%] after:h-[60px] after:top-[-30px] after:bg-gradient-to-r after:from-transparent
              after:via-black after:to-black
-             before:content-[''] before:absolute before:left-0 before:w-[20%] before:h-[60px] before:top-[-30px] before:bg-gradient-to-l before:from-transparent
+             before:content-[''] before:absolute before:left-[-20px] before:w-[20%] before:h-[60px] before:top-[-30px] before:bg-gradient-to-l before:from-transparent
              before:via-black before:to-black"
         ></div>
       </div>
 
-      <div className="flex flex-col items-center justify-between bg-black w-full h-full px-8">
+      <div className="flex items-center justify-center bg-black w-full h-full px-8">
         {/* "be social" Text */}
-        <div className="mt-24 md:mt-16 flex w-full md:pr-16">
-          <div className="grow"></div>
+        <div className="mb-64 w-[50%] flex items-center justify-center">
+          {/* <div className="grow"></div> */}
           <a
             href="mailto:youremail@example.com"
             className="text-white font-artisan text-lg hover:underline"
@@ -79,20 +79,17 @@ export default function LandingPagePlaceholder() {
             connect with us
           </a>
         </div>
-
         {/* Bottom Text Block */}
-        <div className="flex w-full">
-          <div className="mb-16 md:pl-16">
-            <a
-              href="https://instagram.com/@doeslifeordoesnt"
-              target="_blank"
-              rel="noreferrer"
-              className="flex items-center space-x-2 text-white font-artisan text-lg hover:underline"
-            >
-              be social
-            </a>
-          </div>
-          <div className="grow"></div>
+        <div className="mt-64 flex w-[50%] items-center justify-center">
+          <a
+            href="https://instagram.com/@doeslifeordoesnt"
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center space-x-2 text-white font-artisan text-lg hover:underline"
+          >
+            be social
+          </a>
+          {/* <div className="grow"></div> */}
         </div>
       </div>
     </div>
