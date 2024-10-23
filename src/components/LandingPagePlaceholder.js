@@ -61,14 +61,14 @@ export default function LandingPagePlaceholder() {
         </div>
       </div>
 
-      <div className="z-1 relative left-[-45px] md:left-[-100px] ">
+      <div className="z-1 relative left-[-25px] md:left-[-100px] ">
         <div className="absolute bottom-[-90px] left-[180px] md:left-[-180px] md:top-[80px]">
           <p className="text-black font-inter" style={{ fontVariationSettings: '"wght" 572' }}>
             [A HOME FOR INTIMACY]
           </p>
         </div>
 
-        <div className="relative scale-[0.45] sm:scale-[0.6] md:scale-100" >
+        <div className="relative scale-[0.4] sm:scale-[0.6] md:scale-100" >
           <h2 className="pl-[245px] text-[150px] font-inter text-black tracking-[-6px] leading-[117px] text-start" style={{ fontVariationSettings: '"wght" 572' }}>
             DOES
             <br />
@@ -82,7 +82,7 @@ export default function LandingPagePlaceholder() {
           </h2>
         </div>
         <div
-          className="z-2 absolute right-[-60px] bottom-[-10px] md:right-[-200px] md:bottom-[-50px] scale-[0.45] sm:scale-[0.6] md:scale-100"
+          className="z-2 absolute right-[-10px] bottom-[-20px] md:right-[-200px] md:bottom-[-50px] scale-[0.45] sm:scale-[0.6] md:scale-100"
           ref={textRef}>
           <div className="relative">
             <p className="text-[210px] font-pinyon text-[rgb(233,234,236)] leading-[180px] text-center" style={{ fontVariationSettings: '"wght" 572' }}>
