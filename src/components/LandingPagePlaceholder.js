@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 
 export default function LandingPagePlaceholder() {
   const textRef = useRef(null);
-  const [shadowStyle, setShadowStyle] = useState({textShadow: '2px 1px 5px black'});
+  const [shadowStyle, setShadowStyle] = useState({textShadow: '0.3px -1.3px 12px black'});
 
   useEffect(() => {
     function handleMouseMove(e) {
@@ -47,15 +47,15 @@ export default function LandingPagePlaceholder() {
         <div className="grow"></div>
         <div className="flex space-x-8 md:space-x-16 text-black">
           <a
-            href="https://instagram.com/@doeslifeordoesnt"
+            href="https://www.instagram.com/doeslifeordoesnt?igsh=MW45NXFlcHc5ZXJm"
             target="_blank"
             rel="noreferrer"
-            className="text-black font-inter hover:underline" style={{ fontVariationSettings: '"wght" 572' }}>
+            className="text-black font-inter md:hover:underline" style={{ fontVariationSettings: '"wght" 572' }}>
             [FOLLOW]
           </a>
           <a
             href="mailto:reach@doeslife.com"
-            className="text-black font-inter hover:underline" style={{ fontVariationSettings: '"wght" 572' }}>
+            className="text-black font-inter md:hover:underline" style={{ fontVariationSettings: '"wght" 572' }}>
             [INQUIRIES]
           </a>
         </div>
@@ -63,7 +63,7 @@ export default function LandingPagePlaceholder() {
 
       <div className="z-1 relative left-[-25px] md:left-[-100px] ">
         <div className="absolute bottom-[-90px] left-[180px] md:left-[-180px] md:top-[80px]">
-          <p className="text-black font-inter" style={{ fontVariationSettings: '"wght" 572' }}>
+          <p className="text-black text-xs font-inter" style={{ fontVariationSettings: '"wght" 572' }}>
             [A HOME FOR INTIMACY]
           </p>
         </div>
