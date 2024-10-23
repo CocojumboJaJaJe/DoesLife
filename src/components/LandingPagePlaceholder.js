@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ReactComponent as Logo } from '../fixed.svg';
 
 export default function LandingPagePlaceholder() {
   const textRef = useRef(null);
-  const [shadowStyle, setShadowStyle] = useState({});
+  const [shadowStyle, setShadowStyle] = useState({textShadow: '2px 1px 5px black'});
 
   useEffect(() => {
     function handleMouseMove(e) {
@@ -30,7 +29,7 @@ export default function LandingPagePlaceholder() {
       const blurRadius = normalizedDistance * 30; // Max blur 20px, adjust as needed
 
       const newShadowStyle = {
-        textShadow: `${shadowOffsetX}px ${shadowOffsetY}px ${blurRadius}px rgba(255,255,255,0.8)`,
+        textShadow: `${shadowOffsetX + 1}px ${shadowOffsetY + 1}px ${blurRadius + 5}px black `,
       };
 
       setShadowStyle(newShadowStyle);
@@ -43,53 +42,62 @@ export default function LandingPagePlaceholder() {
   }, []);
 
   return (
-    <div className="relative w-full h-screen bg-black overflow-hidden">
-      {/* Vector Logo */}
-      <div className="absolute top-2 left-2 md:top-4 md:left-4 ">
-        <Logo className="h-[80px] w-[180px] md:h-[100px] md:w-[240px]" />
-      </div>
-
-      <div className="absolute text-center top-[45%] left-0 w-full">
-        {/* "Coming Soon" Text */}
-        {/* <h1
-          className="text-white text-lg font-artisan"
-          ref={textRef}
-          style={shadowStyle}
-        >
-          Coming soon
-        </h1> */}
-        {/* Animated Light Line with Shadow */}
-        <div
-          className="absolute left-0 right-0 mx-auto h-[4px] mt-6 md:mt-8 shadow-2xl line-animation rotate-[-45deg] md:rotate-[-30deg]
-            after:content-[''] after:absolute after:right-[-20px] after:w-[20%] after:h-[60px] after:top-[-30px] after:bg-gradient-to-r after:from-transparent
-             after:via-black after:to-black
-             before:content-[''] before:absolute before:left-[-20px] before:w-[20%] before:h-[60px] before:top-[-30px] before:bg-gradient-to-l before:from-transparent
-             before:via-black before:to-black"
-        ></div>
-      </div>
-
-      <div className="flex items-center justify-center bg-black w-full h-full px-8">
-        {/* "be social" Text */}
-        <div className="mb-64 w-[50%] flex items-center justify-center">
-          {/* <div className="grow"></div> */}
-          <a
-            href="mailto:youremail@example.com"
-            className="text-white font-artisan text-lg hover:underline"
-          >
-            connect with us
-          </a>
-        </div>
-        {/* Bottom Text Block */}
-        <div className="mt-64 flex w-[50%] items-center justify-center">
+    <div className="min-h-screen min-w-screen bg-[rgb(233,234,236)] flex flex-col items-center justify-center overflow-hidden">
+      <div className="absolute top-0 w-full flex pt-8 pr-4 md:pr-64">
+        <div className="grow"></div>
+        <div className="flex space-x-8 md:space-x-16 text-black">
           <a
             href="https://instagram.com/@doeslifeordoesnt"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center space-x-2 text-white font-artisan text-lg hover:underline"
-          >
-            be social
+            className="text-black font-inter hover:underline" style={{ fontVariationSettings: '"wght" 572' }}>
+            [FOLLOW]
           </a>
-          {/* <div className="grow"></div> */}
+          <a
+            href="mailto:reach@doeslife.com"
+            className="text-black font-inter hover:underline" style={{ fontVariationSettings: '"wght" 572' }}>
+            [INQUIRIES]
+          </a>
+        </div>
+      </div>
+
+      <div className="z-1 relative left-[-45px] md:left-[-100px] ">
+        <div className="absolute bottom-[-90px] left-[180px] md:left-[-180px] md:top-[80px]">
+          <p className="text-black font-inter" style={{ fontVariationSettings: '"wght" 572' }}>
+            [A HOME FOR INTIMACY]
+          </p>
+        </div>
+
+        <div className="relative scale-[0.45] sm:scale-[0.6] md:scale-100" >
+          <h2 className="pl-[245px] text-[150px] font-inter text-black tracking-[-6px] leading-[117px] text-start" style={{ fontVariationSettings: '"wght" 572' }}>
+            DOES
+            <br />
+            LIFE
+          </h2>
+          <h2 className="pl-[27px] text-[150px] font-inter text-black tracking-[-6px] leading-[117px] text-start" style={{ fontVariationSettings: '"wght" 572' }}>
+            DOES
+          </h2>
+          <h2 className="text-[150px] font-inter text-black tracking-[-6px] leading-[117px] text-start" style={{ fontVariationSettings: '"wght" 572' }}>
+            LIFE
+          </h2>
+        </div>
+        <div
+          className="z-2 absolute right-[-60px] bottom-[-10px] md:right-[-200px] md:bottom-[-50px] scale-[0.45] sm:scale-[0.6] md:scale-100"
+          ref={textRef}>
+          <div className="relative">
+            <p className="text-[210px] font-pinyon text-[rgb(233,234,236)] leading-[180px] text-center" style={{ fontVariationSettings: '"wght" 572' }}>
+              <span style={shadowStyle}>
+                coming
+              </span>
+              <br />
+            </p>
+            <p className="text-[210px] font-pinyon text-[rgb(233,234,236)] leading-[180px] text-center" style={{ fontVariationSettings: '"wght" 572' }}>
+              <span style={shadowStyle}>
+                soon
+              </span>
+              <br />
+            </p>
+          </div>
         </div>
       </div>
     </div>

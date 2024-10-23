@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        artisan: ['Artisan12', 'sans-serif'], 
+        inter: ['Inter', 'sans-serif'], 
+        pinyon: ['"Pinyon Script"'],
       },
     },
   },
